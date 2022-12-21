@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+
+    <title>{% block title %} histoscan {% endblock %}</title>
+
+{% block content %}
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Логотип">
+                </a>
+                <div class="user">
+                    <div class="user__title" href="#">
+                        teymur ynusov
+                    </div>
+                    <a class="user__profile" href="{{ url_for('account') }}">Личный кабинет</a>
+                    <a class="help" href="#">Помощь</a>
+                    <a class="exit" href="{{ url_for('entry') }}">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <div class="main__inner">
+                <div class="main__side"></div>
+                <div class="content">
+                    <ul class="content__list">
+                        <li class="content__item">
+                            <h2 class="content__item-title">Случай #12832. Medved</h2>
+                            <div class="content__item-info">
+                                <div class="content__item-common">
+                                    <div class="data"> 
+                                        <span>Дата:</span>
+                                        5 мая 2022 г.
+                                    </div>
+                                    <div class="specialization"> Специализация:</div>
+                                    <a class="content__item-link" href="{{ url_for('case') }}" target="_blank">Подробнее</a>
+                                </div>
+                                <div class="content__item-description">
+                                    <h3 class="content__item-subtitle">Описание:</h3>
+                                    <textarea class="content__item-textarea"></textarea>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="content__item">
+                            <h2 class="content__item-title">Случай #12828. Laboklin</h2>
+                            <div class="content__item-info">
+                                <div class="content__item-common">
+                                    <div class="data">
+                                        <span>Дата:</span>
+                                        16 марта 2022 г.
+                                    </div>
+                                    <div class="specialization"> Специализация:</div>
+                                    <a class="content__item-link" href="{{ url_for('case') }}" target="_blank">Подробнее</a>
+                                </div>
+                                <div class="content__item-description">
+                                    <h3 class="content__item-subtitle">Описание:</h3>
+                                    <textarea class="content__item-textarea"></textarea>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="content__item">
+                            <h2 class="content__item-title">Случай #12800. Laboklin lk5240 tol.sin.</h2>
+                            <div class="content__item-info">
+                                <div class="content__item-common">
+                                    <div class="data">
+                                        <span>Дата:</span>
+                                        5 мая 2022 г.
+                                    </div>
+                                    <div class="specialization"> Специализация:</div>
+                                    <a class="content__item-link" href="{{ url_for('case') }}" target="_blank">Подробнее</a>
+                                </div>
+                                <div class="content__item-description">
+                                    <h3 class="content__item-subtitle">Описание:</h3>
+                                    <textarea class="content__item-textarea"></textarea>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="content__item">
+                            <h2 class="content__item-title">Случай #12789. Laboklin 5240 tol.sin</h2>
+                            <div class="content__item-info">
+                                <div class="content__item-common">
+                                    <div class="data">
+                                        <span>Дата:</span>
+                                        28 апреля 2022 г.
+                                    </div>
+                                    <div class="specialization"> Специализация:</div>
+                                    <a class="content__item-link" href="{{ url_for('case') }}" target="_blank">Подробнее</a>
+                                </div>
+                                <div class="content__item-description">
+                                    <h3 class="content__item-subtitle">Описание:</h3>
+                                    <textarea class="content__item-textarea"></textarea>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="content__item">
+                            <h2 class="content__item-title">Случай #12190. 3461-69/22</h2>
+                            <div class="content__item-info">
+                                <div class="content__item-common">
+                                    <div class="data">
+                                        <span>Дата:</span>
+                                        27 апреля 2022 г.
+                                    </div>
+                                    <div class="specialization"> Специализация:</div>
+                                    <a class="content__item-link" href="{{ url_for('case') }}" target="_blank">Подробнее</a>
+                                </div>
+                                <div class="content__item-description">
+                                    <h3 class="content__item-subtitle">Описание:</h3>
+                                    <textarea class="content__item-textarea"></textarea>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="content__item">
+                            <h2 class="content__item-title">Случай #12832. Medved</h2>
+                            <div class="content__item-info">
+                                <div class="content__item-common">
+                                    <div class="data">
+                                        <span>Дата:</span>
+                                        15 марта 2022 г.
+                                    </div>
+                                    <div class="specialization"> Специализация:</div>
+                                    <a class="content__item-link" href="{{ url_for('case') }}" target="_blank">Подробнее</a>
+                                </div>
+                                <div class="content__item-description">
+                                    <h3 class="content__item-subtitle">Описание:</h3>
+                                    <textarea class="content__item-textarea"></textarea>
+                                </div>
+                            </div>
+                        </li>
+                        <ul class="pagination">
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">1</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">2</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">3</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">4</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">5</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">6</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">7</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">8</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">9</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">10</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">11</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a class="pagination__link" href="#">12</a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    <script src="{{ url_for('static', filename= 'assets/source/jquery.slim.min.js') }}"></script>
+    <!-- <script src="assets/source/bootstrap-v4/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="assets/source/fancybox/fancybox.umd.js"></script>
+    <script src="assets/source/slick/slick-1.8.1/slick/slick.js"></script> -->
+    <!--<script src="{{ url_for('static', filename='assets/js/main.min.js') }}"></script>-->
+
+    <!--<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if ("IntersectionObserver" in window) {
+                var iframesLazy = document.querySelectorAll("iframe.iframe-youtube-lazy-video");
+                var iframeObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting && entry.target.src.length == 0) {
+                            entry.target.src = entry.target.dataset.src;
+                            iframeObserver.unobserve(entry.target);
+                        }
+                    });
+                });
+                iframesLazy.forEach(function (iframe) {
+                    iframeObserver.observe(iframe);
+                });
+            } else {
+                var iframesLazy = document.querySelector('iframe.iframe-youtube-lazy-video');
+                for (var i = 0; i < iframesLazy.length; i++) {
+                    if (lazyVids[i].getAttribute('data-src')) {
+                        lazyVids[i].setAttribute('src', lazyVids[i].getAttribute('data-src'));
+                    }
+                }
+            }
+        });
+    </script>-->
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+<!--<head>
+
+
+    <title>{% block title %}EntryPage{% endblock %}</title>
+<!--</head>-->
+{% block content %}
+<body>
+
+    <div class="entry">
+        <div class="popup">
+            <button class="popup-close">
+                <img src="{{ url_for('static', filename='assets/images/icons/close-icon.png') }}" alt="закрыть">
+            </button>
+            <h2 class="popup__title">войти</h2>
+            <form class="popup__form">
+                <div class="popup__form-wrapper">
+                    <label class="popup__form-label">
+                        Адрес электронной почты:
+                    </label>
+                    <input class="popup__form-input">
+                </div>
+                <div class="popup__form-wrapper">
+                    <label class="popup__form-label">
+                        Пароль:
+                    </label>
+                    <input class="popup__form-input">
+                </div>
+                <div class="radio">
+                    <input class="radio__input" type="checkbox">
+                    <label class="popup__form-label radio__label">
+                        Запомнить меня
+                    </label>
+                </div>
+                <a class="forget-password" href="#">Забыли пароль?</a>
+                <a class="enter" href="{{ url_for('index') }}">войти</a>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+</body>
+
+й

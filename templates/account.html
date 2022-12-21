@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}AccountPage{% endblock %}</title>
+</head>
+{% block content %}
+<body class="body">
+
+    <div class="account-load load-inactive">
+        <button class="account-load__close">
+            <img src="{{ url_for('static', filename='assets/images/icons/close-icon.png') }}" alt="Закрыть">
+        </button>
+        <h2 class="account-load__title">Изменить фото</h2>
+        <div class="file">
+            <div class="file__wrapper">
+                <label class="file__label">Загрузить файл</label>
+                <input class="file__input"
+                accept="image/*"
+                type="file">
+                <button class="save-btn">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Логотип">
+                </a>
+                <div class="user">
+                    <div class="user__title" href="#">
+                        teymur ynusov
+                    </div>
+                    <a class="user__profile" href="{{ url_for('account') }}">Личный кабинет</a>
+                    <a class="help" href="#">Помощь</a>
+                    <a class="exit" href="{{ url_for('index') }}">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <div class="main__inner">
+                <div class="main__side"></div>
+                <div class="content">
+                    <div class="account">
+                        <div class="account__inner">
+                            <form class="account__form">
+                                <div class="account__form-wrapper">
+                                    <div class="account__form-inner account__surname">
+                                        <label class="account__form-label">Фамилия:</label>
+                                        <input value="YUNUSOV" class="account__form-input" type="text" src=""
+                                            placeholder="">
+                                    </div>
+                                    <div class="account__form-inner account__name">
+                                        <label class="account__form-label">Имя:</label>
+                                        <input value="TEYMUR" class="account__form-input" type="text" src=""
+                                            placeholder="">
+                                    </div>
+                                    <div class="account__form-inner account__specialization select-inner">
+                                        <select size="1" class="account__form-input select">
+                                            <option celected value="Специальность">Специальность</option>
+                                            <option value="Графика">Графика</option>
+                                            <option value="Типографика">Типографика</option>
+                                            <option value="Дизайн">Дизайн</option>
+                                        </select>
+                                    </div>
+                                    <div class="account__form-inner account__specializing select-inner">
+                                        <select size="1" class="account__form-input select">
+                                            <option celected value="Специализация">Специализация</option>
+                                            <option value="Графика">Графика-1</option>
+                                            <option value="Типографика">Типографика-1</option>
+                                            <option value="Дизайн">Дизайн-1</option>
+                                        </select>
+                                    </div>
+                                    <div class="account__form-inner account__contact">
+                                        <label class="account__form-label">Контакты:</label>
+                                        <input value="+79670394064" class="account__form-input" type="text" src=""
+                                            placeholder="">
+                                    </div>
+                                    <div class="account__form-inner account__specialization">
+                                        <label class="account__form-label">О себе:</label>
+                                        <input value="." class="account__form-input" type="text" src="" placeholder="">
+                                    </div>
+                                    <div class="account__form-inner account__language select-inner">
+                                        <select size="1" class="account__form-input select">
+                                            <option celected value="Language">Language</option>
+                                            <option value="Графика">Spanish</option>
+                                            <option value="Типографика">German</option>
+                                            <option value="Дизайн">English</option>
+                                        </select>
+                                    </div>
+                                    <div class="radio">
+                                        <div class="radio__item">
+                                            <input class="radio__input" type="checkbox">
+                                            <label class="popup__form-label radio__label">
+                                                Включить email уведомления
+                                            </label>
+                                        </div>
+                                        <div class="radio__item">
+                                            <input class="radio__input" type="checkbox">
+                                            <label class="popup__form-label radio__label">
+                                                Включить email дайджест
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="account__form-inner account__api">
+                                        <label class="account__form-label">API token:</label>
+                                        <input value="548dcd5f6197887d4fb7e32d23215c087aa8efa2"
+                                            class="account__form-input" type="text" src="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="account__form-photo">
+                                    <button
+                                    onclick="event.preventDefault()"
+                                    class="change-photo">
+
+                                    </button>
+                                </div>
+                        </div>
+                        <button class="save-btn">Сохранить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+</body>
+{% endblock %}
+</html>

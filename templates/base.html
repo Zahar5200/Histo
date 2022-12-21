@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+    <!-- Required meta tags -->
+    <!--<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/source/bootstrap-v4/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/source/fancybox/fancybox.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/source/slick/slick-1.8.1/slick/slick.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.min.css') }}">
+
+    <title>{% block title %} {% endblock %}</title>
+
+        {% block content %} {% endblock %}
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static', filename='assets/source/jquery.slim.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/case.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/source/fancybox/fancybox.umd.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/accountPage.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/index.js') }}"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if ("IntersectionObserver" in window) {
+                var iframesLazy = document.querySelectorAll("iframe.iframe-youtube-lazy-video");
+                var iframeObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting && entry.target.src.length == 0) {
+                            entry.target.src = entry.target.dataset.src;
+                            iframeObserver.unobserve(entry.target);
+                        }
+                    });
+                });
+                iframesLazy.forEach(function (iframe) {
+                    iframeObserver.observe(iframe);
+                });
+            } else {
+                var iframesLazy = document.querySelector('iframe.iframe-youtube-lazy-video');
+                for (var i = 0; i < iframesLazy.length; i++) {
+                    if (lazyVids[i].getAttribute('data-src')) {
+                        lazyVids[i].setAttribute('src', lazyVids[i].getAttribute('data-src'));
+                    }
+                }
+            }
+        });
+    </script>
+
+</html>
